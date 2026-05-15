@@ -1,0 +1,79 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 228 28% 7%;
+    --foreground: 220 20% 92%;
+    --muted: 228 18% 15%;
+    --muted-foreground: 220 12% 50%;
+    --popover: 228 25% 9%;
+    --popover-foreground: 220 20% 90%;
+    --border: 228 18% 18%;
+    --input: 228 18% 15%;
+    --card: 228 22% 11%;
+    --card-foreground: 220 20% 90%;
+    --primary: 262 65% 62%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 228 18% 18%;
+    --secondary-foreground: 220 15% 80%;
+    --accent: 130 75% 47%;
+    --accent-foreground: 0 0% 0%;
+    --destructive: 0 80% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --ring: 262 65% 62%;
+    --radius: 0.5rem;
+    --chart-1: 262 65% 62%;
+    --chart-2: 130 75% 47%;
+    --chart-3: 220 80% 60%;
+    --chart-4: 30 80% 60%;
+    --chart-5: 0 80% 60%;
+    --sidebar-background: 228 25% 9%;
+    --sidebar-foreground: 220 20% 90%;
+    --sidebar-primary: 262 65% 62%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 228 18% 18%;
+    --sidebar-accent-foreground: 220 20% 90%;
+    --sidebar-border: 228 18% 18%;
+    --sidebar-ring: 262 65% 62%;
+    --font-sans: 'Inter', 'Helvetica Neue', sans-serif;
+    --font-mono: 'Courier New', monospace;
+    --shadow-x: 0px;
+    --shadow-y: 2px;
+    --shadow-blur: 12px;
+    --shadow-spread: 0px;
+    --shadow-opacity: 0.5;
+    --shadow-color: #000000;
+    --shadow-2xs: var(--shadow-x) var(--shadow-y) color-mix(in srgb, var(--shadow-color) calc(var(--shadow-opacity) * 100%), transparent);
+    --shadow-xs: var(--shadow-x) var(--shadow-y) var(--shadow-blur) var(--shadow-spread) color-mix(in srgb, var(--shadow-color) calc(var(--shadow-opacity) * 100%), transparent);
+    --shadow-sm: var(--shadow-x) var(--shadow-y) calc(var(--shadow-blur) * 1.5) var(--shadow-spread) color-mix(in srgb, var(--shadow-color) calc(var(--shadow-opacity) * 100%), transparent);
+    --shadow-md: calc(var(--shadow-x) * 2) calc(var(--shadow-y) * 2) calc(var(--shadow-blur) * 3) calc(var(--shadow-spread) - 1px) color-mix(in srgb, var(--shadow-color) calc(var(--shadow-opacity) * 100%), transparent);
+    --shadow-lg: calc(var(--shadow-x) * 4) calc(var(--shadow-y) * 4) calc(var(--shadow-blur) * 5) calc(var(--shadow-spread) - 3px) color-mix(in srgb, var(--shadow-color) calc(var(--shadow-opacity) * 100%), transparent);
+    --shadow-xl: calc(var(--shadow-x) * 6) calc(var(--shadow-y) * 6) calc(var(--shadow-blur) * 7) calc(var(--shadow-spread) - 5px) color-mix(in srgb, var(--shadow-color) calc(var(--shadow-opacity) * 100%), transparent);
+    --shadow-2xl: calc(var(--shadow-x) * 8) calc(var(--shadow-y) * 8) calc(max(0px, var(--shadow-blur) * 9 - 8px)) calc(var(--shadow-spread) - 12px) color-mix(in srgb, var(--shadow-color) calc(var(--shadow-opacity) * 250%), transparent);
+    --shadow: var(--shadow-md);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  /* Custom white arrow cursor — CSS only, zero JS interference */
+  html {
+    cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='20'%3E%3Cpath d='M2 1L2 15L5 12L7 18L9 17L7 11L12 11Z' fill='white' stroke='%23000000' stroke-width='1.2' stroke-linejoin='round'/%3E%3C/svg%3E") 2 1, auto;
+  }
+
+  input, textarea, [contenteditable] {
+    cursor: text;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+}
